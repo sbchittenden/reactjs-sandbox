@@ -3,4 +3,18 @@
   width: 400px;
   height: 600px;
   border-radius: 5px;
+  padding: 2em;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon-wrapper {
+  width: 50%;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
 }

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One');
+
+.btn--standard {
+  font-family: 'Leckerli One';
+  font-size: 2em;
+  outline: none;
+  border: solid 4px black;
+  background-color: transparent;
+  padding: 0.5em 1em;
+  /*height: 2.5em;*/
+  width: auto;
+  border-radius: 2em;
+  transition: all .2s ease;
+}
+
+.btn--standard:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.btn--standard:active {
+  background-color: #F62459;
+}
