@@ -1,0 +1,50 @@
+.address {
+  font-family: 'Helvetica', sans-serif;
+}
+
+.name, .street, .city-state-zip {
+  margin: 0.1em 0;
+}
+
+.name {
+  font-size: 1.2em;
+}
+
+.envelope {
+  font-family: sans-serif;
+  position: relative;
+  border: solid 1px black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 1em;
+  height:250px;
+  width: 580px;
+}
+
+.sender {
+  align-self: flex-start;
+  font-size: 0.8em;
+}
+
+.receiver {
+  margin-top: 50px;
+}
+
+.stamp {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 60px;
+  height: 70px;
+  border: solid 1px black;
+  text-align: center;
+}
+
+.stamp__label {
+  display: block;
+  margin-top: 25px;
+  color: lightgray;
+  font-weight: 700;
+  transform: rotate(-35deg);
+}
