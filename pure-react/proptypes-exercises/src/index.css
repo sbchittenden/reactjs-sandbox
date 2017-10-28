@@ -1,3 +1,6 @@
+*  {
+  box-sizing: border-box;
+}
 .address {
   font-family: 'Helvetica', sans-serif;
 }
@@ -19,7 +22,7 @@
   align-items: center;
   padding: 1em;
   height:250px;
-  width: 580px;
+  width: 520px;
 }
 
 .sender {
@@ -47,4 +50,84 @@
   color: lightgray;
   font-weight: 700;
   transform: rotate(-35deg);
+}
+
+.credit-card {
+  color: white;
+  background-color: royalblue;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  padding: 1.5em 1em 0.3em 1em;
+}
+
+.bank-name {
+  width: 100%;
+  text-align: right;
+  font-weight: 400;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  margin-bottom: 25px;
+}
+
+.cc-number {
+  font-family: monospace;
+  width: 100%;
+  font-size: 1.6em;
+  font-weight: 100;
+  text-align: justify;
+  letter-spacing: 1.5px;
+}
+
+.cc-little-num {
+  font-size: 0.7em;
+  width: 30%;
+  margin-top: -15px;
+}
+
+.exp-date {
+  width: 30%;
+  font-size: 1.5em;
+  font-family: monospace;
+  padding-left: 5px;
+}
+
+.cardholder-name {
+  font-family: monospace;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.valid-thru {
+  font-size: 0.5em;
+  text-transform: uppercase;
+  width: 15%;
+  text-align: right;
+}
+
+.poster {
+  background-color: black;
+  padding: 1em;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  color: yellow;
+  font-family: sans-serif;
+}
+.poster__image {
+  border: solid 3px white;
+}
+
+.poster__image > img {
+  object-fit: fill;
+}
+.poster__title {
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
 }

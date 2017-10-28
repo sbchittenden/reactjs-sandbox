@@ -9,6 +9,8 @@ function App() {
     <div>
       <Address person={testPerson}/>
       <Envelope addressInfo={testAddresses}/>
+      <CreditCard cardInfo={testCCInfo}/>
+      <Poster poster={testPoster}/>
     </div>
   );
 }
@@ -40,6 +42,35 @@ function Envelope({ addressInfo }) {
   );
 }
 
+function CreditCard({ cardInfo }) {
+  var { bankName, ccNumber, expiration, name } = cardInfo;
+  return (
+    <div className="credit-card">
+      <div className="bank-name">{bankName}</div>
+      <div className="cc-number">{ccNumber}</div>
+      <div className="cc-little-num">{ccNumber.slice(0, 4)}</div>
+      <div className="valid-thru">valid thru</div>
+      <div className="exp-date">{expiration}</div>
+      <div className="cardholder-name">{name}</div>
+    </div>
+    );
+}
+
+function Poster({ poster }) {
+  var  { image, title, text } = poster
+  return (
+  <div className="poster">
+    <div className="poster__image">
+      <img src={image} alt=""/>
+    </div>
+    <div className="poster__title">{title}</div>
+    <div className="poster__text">{text}</div>
+  </div>
+  );
+}
+
+
+
 var testPerson = {
   firstname: "Sam",
   lastname: "Chittenden",
@@ -66,5 +97,18 @@ var testAddresses = {
   toPerson: testPerson2,
   fromPerson: testPerson
 };
+
+var testCCInfo = {
+  name: "Sam Chittenden",
+  expiration: "08/19",
+  ccNumber: "9883 5678 9876 5432",
+  bankName: "MoneyBags, Inc."
+}
+
+var testPoster = {
+  image: "http://www.placecage.com/c/300/170",
+  title: "Nick Cage is Back!",
+  text: "Hey hey hey, I'm back!"
+}
 
 ReactDOM.render(<App/>, document.querySelector('#root'))
