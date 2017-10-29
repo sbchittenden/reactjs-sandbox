@@ -106,7 +106,7 @@ var testCCInfo = {
 }
 
 var testPoster = {
-  image: "http://www.placecage.com/c/300/170",
+  image: "http://www.placecage.com/c/300/210",
   title: "Nick Cage is Back!",
   text: "Hey hey hey, I'm back!"
 }

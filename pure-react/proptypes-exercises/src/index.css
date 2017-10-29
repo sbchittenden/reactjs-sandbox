@@ -121,10 +121,11 @@
 }
 .poster__image {
   border: solid 3px white;
+  display: flex;
 }
 
 .poster__image > img {
-  object-fit: fill;
+  object-fit: cover;
 }
 .poster__title {
   font-size: 1.5em;
