@@ -11,6 +11,8 @@ function App() {
       <Envelope addressInfo={testAddresses}/>
       <CreditCard cardInfo={testCCInfo}/>
       <Poster poster={testPoster}/>
+      <EmailDisplay email={testEmail}/>
+      <IconButton>Testing!</IconButton>
     </div>
   );
 }
@@ -69,7 +71,30 @@ function Poster({ poster }) {
   );
 }
 
+function EmailDisplay({ email }) {
+  var { sender, subject, date, message } = email;
+  return (
+    <div className="email-wrapper">
+      <input className="email__select" type="checkbox"/>
+      <i className="fa fa-thumb-tack" aria-hidden="true"></i>
+      <div className="main-body">
+        <span className="sender">{sender}</span>
+        <span className="subject">{subject}</span>
+        <span className="date">{date}</span>
+        <p className="message">{message}</p>
+      </div>
+    </div>
+  );
+}
 
+function IconButton({ children }) {
+  return (
+    <button className="icon-btn">
+      <i className="fa fa-dot-circle-o"/>
+      {children}
+    </button>
+  );
+}
 
 var testPerson = {
   firstname: "Sam",
@@ -110,5 +135,13 @@ var testPoster = {
   title: "Nick Cage is Back!",
   text: "Hey hey hey, I'm back!"
 }
+
+var testEmail = {
+  sender: "React Newsletter",
+  subject: "React Newsletter - Issue 36",
+  date: "Jul 15",
+  message: "React Newsletter - Issue 36 - July 15th 2016 Read this issue on the web http://www.reactjsnewsletter.com/issues/36/?sid=3QGDYBX"
+};
+
 
 ReactDOM.render(<App/>, document.querySelector('#root'))
